@@ -14,6 +14,7 @@ type VibeSeed = {
   previewImageUrl: string;
   jsonSchema: Record<string, unknown>;
   related?: string[];
+  curated?: boolean;
 };
 
 async function bootstrapFirebase() {
@@ -188,6 +189,162 @@ const vibeSeeds: VibeSeed[] = [
       },
     },
     related: ['rainy-cafe'],
+  },
+  {
+    id: 'product-reel',
+    name: 'Product Reel',
+    tagline: 'Highlight your products in motion — perfect for Instagram or TikTok ads.',
+    prompt:
+      'A cinematic close-up reel of products rotating on reflective surfaces with soft lighting, perfect for social media ads.',
+    tags: ['product', 'ad', 'motion', 'social'],
+    modelSupport: ['Sora', 'Veo', 'Pika'],
+    useCases: ['E-commerce brands', 'Small businesses'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1556767576-5ec41e3239f2',
+    jsonSchema: {
+      aspect_ratio: '9:16',
+      pacing: 'snappy',
+      camera: {
+        movement: 'turntable macro',
+        lens: '100mm macro',
+      },
+      palette: ['#111827', '#F9FAFB', '#FBBF24'],
+      soundtrack: {
+        tempo: 128,
+        instrumentation: ['electronic bass', 'claps'],
+      },
+    },
+    curated: true,
+    related: ['startup-hustle'],
+  },
+  {
+    id: 'founder-intro',
+    name: 'Founder Intro',
+    tagline: 'A cinematic yet casual introduction to your brand’s story — perfect for LinkedIn or YouTube.',
+    prompt:
+      'An authentic founder speaking in a warm-light studio, handheld camera, gentle zoom-ins, natural sound bed.',
+    tags: ['founder', 'story', 'brand'],
+    modelSupport: ['Sora', 'Veo'],
+    useCases: ['Small business owners', 'Creators'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
+    jsonSchema: {
+      aspect_ratio: '16:9',
+      pacing: 'steady',
+      camera: {
+        movement: 'gentle handheld',
+        lens: '35mm prime',
+      },
+      palette: ['#FDE68A', '#1F2937', '#D97706'],
+      soundtrack: {
+        tempo: 96,
+        instrumentation: ['acoustic guitar', 'soft percussion'],
+      },
+    },
+    curated: true,
+    related: ['startup-hustle'],
+  },
+  {
+    id: 'customer-story',
+    name: 'Customer Story',
+    tagline: 'Showcase authentic testimonials to build trust with potential customers.',
+    prompt:
+      'Real customers talking about their experience in warm daylight, subtle b-roll cut-ins of product usage.',
+    tags: ['testimonial', 'customer', 'trust'],
+    modelSupport: ['Sora', 'Runway'],
+    useCases: ['Service companies', 'DTC brands'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1506765515384-028b60a970df',
+    jsonSchema: {
+      aspect_ratio: '16:9',
+      pacing: 'moderate',
+      camera: {
+        movement: 'tripod interview',
+        lens: '50mm prime',
+      },
+      palette: ['#F7FAFC', '#2D3748', '#38B2AC'],
+      soundtrack: {
+        tempo: 88,
+        instrumentation: ['piano', 'ambient pads'],
+      },
+    },
+    curated: true,
+    related: ['founder-intro'],
+  },
+  {
+    id: 'event-teaser',
+    name: 'Event Teaser',
+    tagline: 'Create excitement for your upcoming launch, webinar, or community event.',
+    prompt:
+      'Fast-cut energetic montage with upbeat music, crowd shots, product reveals, logo outro.',
+    tags: ['event', 'teaser', 'promo'],
+    modelSupport: ['Sora', 'Pika'],
+    useCases: ['Brands', 'Agencies', 'Event organizers'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    jsonSchema: {
+      aspect_ratio: '16:9',
+      pacing: 'rapid',
+      camera: {
+        movement: 'mixed handheld and drone',
+        lens: '24mm wide',
+      },
+      palette: ['#1F2937', '#2563EB', '#FCD34D'],
+      soundtrack: {
+        tempo: 132,
+        instrumentation: ['electronic drums', 'crowd ambience'],
+      },
+    },
+    curated: true,
+    related: ['startup-hustle'],
+  },
+  {
+    id: 'behind-the-scenes',
+    name: 'Behind the Scenes',
+    tagline: 'Show your creative process and team moments — adds personality and transparency.',
+    prompt:
+      'Documentary-style handheld shots, natural lighting, casual conversations, workspace details.',
+    tags: ['bts', 'process', 'team'],
+    modelSupport: ['Veo', 'Pika'],
+    useCases: ['Agencies', 'Content studios'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7',
+    jsonSchema: {
+      aspect_ratio: '4:5',
+      pacing: 'observational',
+      camera: {
+        movement: 'roaming handheld',
+        lens: '35mm prime',
+      },
+      palette: ['#F3F4F6', '#4B5563', '#10B981'],
+      soundtrack: {
+        tempo: 84,
+        instrumentation: ['ambient keys', 'room tone'],
+      },
+    },
+    curated: true,
+    related: ['customer-story'],
+  },
+  {
+    id: 'seasonal-campaign',
+    name: 'Seasonal Campaign',
+    tagline: 'Create vibrant seasonal visuals for holidays or sales using AI templates.',
+    prompt:
+      'Bright color palette, festive background elements, centered product focus with animated sparkles.',
+    tags: ['holiday', 'campaign', 'seasonal'],
+    modelSupport: ['Sora', 'Runway'],
+    useCases: ['Retailers', 'Online brands'],
+    previewImageUrl: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70',
+    jsonSchema: {
+      aspect_ratio: '1:1',
+      pacing: 'upbeat',
+      camera: {
+        movement: 'slow push-in',
+        lens: '50mm prime',
+      },
+      palette: ['#EF4444', '#F97316', '#FACC15'],
+      soundtrack: {
+        tempo: 140,
+        instrumentation: ['bells', 'electronic drums'],
+      },
+    },
+    curated: true,
+    related: ['product-reel'],
   },
 ];
 

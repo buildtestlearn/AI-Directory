@@ -22,7 +22,7 @@ This repository stores tooling used to prototype the **AI Video Directory** vibe
    npm run seed
    ```
 
-The script will upsert six vibes into the `vibes` collection, including prompt templates, tags, supported models, and structured JSON metadata for each vibe.
+The script will upsert twelve vibes into the `vibes` collection, including prompt templates, tags, supported models, curation flags, and structured JSON metadata for each entry.
 
 ## Project structure
 
