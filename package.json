@@ -1,0 +1,16 @@
+{
+  "name": "ai-video-directory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "ts-node --esm scripts/seedVibes.ts"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.1.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
